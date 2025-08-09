@@ -1,30 +1,24 @@
 [build]
-  # If we have a widget app, build it; otherwise this can be adjusted.
-  command = "corepack enable && pnpm install --frozen-lockfile && pnpm build"
-  publish = "apps/widget/dist" # <- if no widget, point to "docs" or a stub dir
+  # Build the widget app with pnpm in a monorepo
+  command = "pnpm -v && pnpm -w install --frozen-lockfile && pnpm --filter @durmah/widget build"
+  publish = "apps/widget/dist"
+
+[build.environment]
+  NODE_VERSION = "18"
+  PNPM_VERSION = "9"
 
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
-  external_node_modules = [
-    "fastify",
-    "@fastify/cors",
-    "@fastify/websocket",
-    "@fastify/aws-lambda",
-    "openai",
-    "@supabase/supabase-js",
-    "zod",
-    "dotenv"
-  ]
 
-# Route API traffic to the function
+# Route API traffic to the lambda function
 [[redirects]]
   from = "/v1/*"
   to = "/.netlify/functions/api"
   status = 200
   force = true
 
-# History fallback (if SPA widget)
+# SPA fallback for Vite build
 [[redirects]]
   from = "/*"
   to = "/index.html"
