@@ -1,0 +1,10 @@
+{
+  "brand": {
+    "colors": {
+      "primary": "#4B2E83",
+      "accent": "#B7A57A",
+      "text": "#333333",
+      "bg": "#FFFFFF"
+    }
+  }
+}

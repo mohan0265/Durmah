@@ -1,0 +1,15 @@
+{
+  "syllabus": [
+    {
+      "moduleId": "TORT-101",
+      "title": "Tort Law",
+      "topics": [
+        {
+          "topicId": "negligence",
+          "title": "Negligence",
+          "outcomes": ["..."]
+        }
+      ]
+    }
+  ]
+}

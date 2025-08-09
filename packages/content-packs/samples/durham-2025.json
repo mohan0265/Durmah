@@ -1,0 +1,84 @@
+{
+  "id": "durham-law-2025",
+  "displayName": "Durham Law 2025",
+  "jurisdiction": "UK",
+  "syllabus": [
+    {
+      "moduleId": "TORT-101",
+      "title": "Tort Law",
+      "topics": [
+        {
+          "topicId": "tort-negligence",
+          "title": "Negligence",
+          "outcomes": [
+            "Understand the duty of care",
+            "Apply the Caparo test",
+            "Analyze breach of duty",
+            "Evaluate causation and remoteness"
+          ]
+        },
+        {
+          "topicId": "tort-nuisance",
+          "title": "Nuisance",
+          "outcomes": [
+            "Distinguish private and public nuisance",
+            "Apply the locality principle",
+            "Understand remedies available"
+          ]
+        }
+      ]
+    }
+  ],
+  "caseSummaries": [
+    {
+      "caseId": "donoghue-v-stevenson",
+      "title": "Donoghue v Stevenson",
+      "citation": "[1932] AC 562",
+      "year": 1932,
+      "summary": "Established the modern law of negligence and the neighbor principle. Mrs Donoghue consumed ginger beer containing a decomposed snail.",
+      "keyPrinciples": [
+        "Neighbor principle",
+        "Duty of care to foreseeable victims",
+        "Product liability foundation"
+      ]
+    },
+    {
+      "caseId": "caparo-v-dickman",
+      "title": "Caparo Industries plc v Dickman",
+      "citation": "[1990] 2 AC 605",
+      "year": 1990,
+      "summary": "Established the three-stage test for duty of care: foreseeability, proximity, and whether it is fair, just and reasonable.",
+      "keyPrinciples": [
+        "Three-stage test for duty of care",
+        "Incremental approach",
+        "Economic loss limitations"
+      ]
+    }
+  ],
+  "statutes": [
+    {
+      "statuteId": "occupiers-liability-1957",
+      "title": "Occupiers' Liability Act 1957",
+      "jurisdiction": "England and Wales",
+      "sections": [
+        {
+          "section": "2(1)",
+          "text": "An occupier of premises owes the same duty, the 'common duty of care', to all his visitors, except in so far as he is free to and does extend, restrict, modify or exclude his duty to any visitor or visitors by agreement or otherwise."
+        },
+        {
+          "section": "2(2)",
+          "text": "The common duty of care is a duty to take such care as in all the circumstances of the case is reasonable to see that the visitor will be reasonably safe in using the premises for the purposes for which he is invited or permitted by the occupier to be there."
+        }
+      ]
+    }
+  ],
+  "pedagogy": {
+    "tone": "mentor",
+    "citationStyle": "OSCOLA",
+    "socraticDepth": 2
+  },
+  "prompts": {
+    "systemPersona": "You are Durmah, a legal studies voice companion for Durham Law School. You explain UK law concepts clearly, using the OSCOLA citation style. You are a supportive mentor who teaches through the Socratic method, asking thoughtful questions to guide understanding. You reference cases and statutes from the content pack when relevant.",
+    "guardrails": "Never provide legal advice for real situations. Do not write assignments or essays for students. If asked about exam cheating or academic dishonesty, redirect to proper study techniques. Focus on teaching legal concepts and analytical skills."
+  }
+}
