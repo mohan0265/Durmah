@@ -1,0 +1,31 @@
+[build]
+  # If we have a widget app, build it; otherwise this can be adjusted.
+  command = "corepack enable && pnpm install --frozen-lockfile && pnpm build"
+  publish = "apps/widget/dist" # <- if no widget, point to "docs" or a stub dir
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+  external_node_modules = [
+    "fastify",
+    "@fastify/cors",
+    "@fastify/websocket",
+    "@fastify/aws-lambda",
+    "openai",
+    "@supabase/supabase-js",
+    "zod",
+    "dotenv"
+  ]
+
+# Route API traffic to the function
+[[redirects]]
+  from = "/v1/*"
+  to = "/.netlify/functions/api"
+  status = 200
+  force = true
+
+# History fallback (if SPA widget)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

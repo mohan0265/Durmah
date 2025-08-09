@@ -1,27 +1,34 @@
-# Node / package managers
+# Node
 node_modules/
-.pnpm-store/
-.pnp.*
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
-# Builds / artifacts
-dist/
-build/
-.next/
-out/
-coverage/
-*.tsbuildinfo
+# Build caches & outputs
+**/.turbo/
+**/.next/
+**/dist/
+**/build/
+**/.vite/
+**/.parcel-cache/
 
-# Local env & editor
+# TypeScript
+**/*.tsbuildinfo
+
+# Env
 .env
-.env.*
-!.env.example
+.env.local
+.env.*.local
+
+# IDEs
 .vscode/
+.idea/
 .DS_Store
-Thumbs.db
 
 # Netlify
 .netlify/
-functions-serve/
+
+# Logs
+logs/
+**/*.log
