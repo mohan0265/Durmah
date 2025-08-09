@@ -2,21 +2,207 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/webp" href="/durmah-icon.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Durmah</title>
+    <meta name="description" content="Durmah Legal Eagle Buddy - Your AI-powered legal tutor and study companion" />
+    <meta name="keywords" content="legal education, law school, AI tutor, legal study assistant" />
+    <title>Durmah • Legal Eagle Buddy</title>
+    
+    <!-- Preload critical fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Durmah • Legal Eagle Buddy" />
+    <meta property="og:description" content="AI-powered legal tutor providing personalized study assistance for law students" />
+    <meta property="og:url" content="https://mydurmahlaw.com" />
+    
+    <!-- Additional Meta -->
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Durmah Legal Technologies" />
+    
     <style>
-      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; margin: 24px; }
+      /* Critical CSS for loading state */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        background: #ffffff;
+        color: #111827;
+      }
+      
+      #app {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+      }
+      
+      /* Loading spinner */
+      .loading-container {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 9999;
+      }
+      
+      .loading-spinner {
+        width: 40px;
+        height: 40px;
+        border: 4px solid #e5e7eb;
+        border-top: 4px solid #7c3aed;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin: 0 auto 16px;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      .loading-text {
+        color: #6b7280;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      
+      /* Hide loading when app loads */
+      .app-loaded .loading-container {
+        display: none;
+      }
+      
+      /* Demo page styles */
+      .demo-page {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+      
+      .demo-content {
+        text-align: center;
+        color: white;
+        max-width: 600px;
+      }
+      
+      .demo-content h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      }
+      
+      .demo-content p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+        opacity: 0.9;
+      }
+      
+      .demo-features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin: 2rem 0;
+      }
+      
+      .feature {
+        background: rgba(255,255,255,0.1);
+        padding: 1rem;
+        border-radius: 8px;
+        backdrop-filter: blur(10px);
+      }
+      
+      .feature-icon {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+      
+      @media (max-width: 768px) {
+        .demo-content h1 {
+          font-size: 2rem;
+        }
+        .demo-content p {
+          font-size: 1rem;
+        }
+      }
     </style>
   </head>
   <body>
-    <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
-      <img src="/durmah-logo.webp" alt="Durmah" width="40" height="40" />
-      <h1>Durmah</h1>
+    <!-- Loading State -->
+    <div class="loading-container">
+      <div class="loading-spinner"></div>
+      <div class="loading-text">Loading Legal Eagle Buddy...</div>
     </div>
-    <div><b>Status:</b> <span id="status">checking…</span></div>
-    <pre id="data" style="background:#f9fafb;border:1px solid #e5e7eb;padding:10px;border-radius:8px;"></pre>
-
-    <div id="app"></div>
+    
+    <!-- Main App Container -->
+    <div id="app">
+      <!-- Demo Page Content (will be replaced by React app) -->
+      <div class="demo-page">
+        <div class="demo-content">
+          <h1>Durmah Legal Eagle Buddy</h1>
+          <p>Your AI-powered legal tutor and study companion. Get instant help with legal concepts, case analysis, exam prep, and more.</p>
+          
+          <div class="demo-features">
+            <div class="feature">
+              <div class="feature-icon">⚖️</div>
+              <h3>Legal Expertise</h3>
+              <p>All areas of law covered</p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">🎓</div>
+              <h3>Study Support</h3>
+              <p>Exam prep & techniques</p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">💬</div>
+              <h3>Voice Interaction</h3>
+              <p>Natural conversations</p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">🏥</div>
+              <h3>Wellness Care</h3>
+              <p>Mental health support</p>
+            </div>
+          </div>
+          
+          <p><strong>Look for the floating Legal Eagle Buddy button in the bottom right corner!</strong></p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- App Status Display (Optional) -->
+    <div id="status" style="display: none;"></div>
+    <pre id="data" style="display: none;"></pre>
+    
     <script type="module" src="/src/main.tsx"></script>
+    
+    <script>
+      // Remove loading state when React app loads
+      window.addEventListener('load', function() {
+        setTimeout(() => {
+          document.body.classList.add('app-loaded');
+        }, 1000);
+      });
+      
+      // Enhanced error handling
+      window.addEventListener('error', function(e) {
+        console.error('Widget Error:', e.error);
+        document.querySelector('.loading-text').textContent = 'Error loading widget. Please refresh.';
+      });
+      
+      // Service worker registration for offline support (optional)
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          // navigator.serviceWorker.register('/sw.js'); // Uncomment if you add a service worker
+        });
+      }
+    </script>
   </body>
 </html>

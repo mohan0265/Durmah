@@ -15,7 +15,7 @@ export const WidgetConfig = z.object({
   }),
   voice: z.object({
     provider: z.enum(["elevenlabs", "azure"]).default("elevenlabs"),
-    voiceId: z.string().default("Rachel"),
+    voiceId: z.string().default("cgSgspJ2msm6clMCkdW9"),
     rate: z.number().min(0.75).max(1.25).default(1),
     pitch: z.number().min(-4).max(4).default(0)
   }),

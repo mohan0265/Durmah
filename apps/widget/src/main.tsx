@@ -1,26 +1,47 @@
-// apps/widget/src/main.ts
+// apps/widget/src/main.tsx
 import React from "react";
 import { createRoot } from "react-dom/client";
 import { DurmahWidget } from "./DurmahWidget";
+import "./styles.css";
 
 // Build API base from Vite env (fallback to /v1)
 const API_BASE = (import.meta.env.VITE_API_BASE || "/v1").replace(/\/$/, "");
 
 // Minimal config compatible with your DurmahWidget props
 const config = {
+  id: "durmah-widget-default",
   brand: {
     name: "Durmah • Legal Eagle Buddy",
     iconUrl: "/durmah-icon.webp",
     logoUrl: "/durmah-logo.webp",
     colors: {
       primary: "#7c3aed",
-      accent: "#6b21a8",
+      accent: "#6b21a8", 
       text: "#111827",
       bg: "#ffffff"
     }
   },
+  voice: {
+    provider: "elevenlabs" as const,
+    voiceId: "cgSgspJ2msm6clMCkdW9",
+    rate: 1.0,
+    pitch: 0
+  },
+  ai: {
+    chatModel: "gpt-4o",
+    temperature: 0.2,
+    maxTokens: 2048
+  },
   features: {
-    voiceMode: true
+    voiceMode: true,
+    textMode: true,
+    autoOpenTranscriptOnSessionEnd: true,
+    saveTranscriptsByDefault: false
+  },
+  contentPackId: "default",
+  policies: {
+    piiAllowed: false,
+    retainAudio: false
   },
   endpoints: {
     // Netlify function routes (you already redirect /v1/* to the function)

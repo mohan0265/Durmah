@@ -28,7 +28,7 @@ const configs: Record<string, WidgetConfig> = {
       iconUrl: 'https://durham.ac.uk/icon.svg',
       colors: { primary: '#7C2855', accent: '#D4AF37', text: '#333333', bg: '#FFFFFF' }
     },
-    voice: { provider: 'elevenlabs', voiceId: 'Rachel', rate: 1.0, pitch: 0 },
+    voice: { provider: 'elevenlabs', voiceId: 'cgSgspJ2msm6clMCkdW9', rate: 1.0, pitch: 0 },
     ai: { chatModel: 'gpt-4o', temperature: 0.2, maxTokens: 2048 },
     features: { voiceMode: true, textMode: true, autoOpenTranscriptOnSessionEnd: true, saveTranscriptsByDefault: false },
     contentPackId: 'durham-law-2025',
