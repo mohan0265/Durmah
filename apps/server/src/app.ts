@@ -8,21 +8,23 @@ import { getSupabase } from './db/client';
 
 loadEnv();
 
-export function buildServer() {
+export async function buildServer() {
   const server = Fastify({ logger: true });
 
   // One-time init (safe to call; no-op if already created)
   getSupabase();
   initProviders();
 
-  server.register(cors, {
+  await server.register(cors, {
     origin: process.env.CORS_ORIGIN || '*'
   });
 
-  server.register(websocket);
+  await server.register(websocket);
 
   // All API routes are prefixed in index to '/v1'
-  server.register(registerRoutes, { prefix: '/v1' });
+  await server.register(registerRoutes, { prefix: '/v1' });
+
+  await server.ready();
 
   return server;
 }
