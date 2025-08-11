@@ -7,11 +7,7 @@ export default function AudioWaveform({ isActive }: AudioWaveformProps) {
     <div className={`audio-waveform ${isActive ? 'active' : ''}`}>
       <div className="waveform-bars">
         {[...Array(5)].map((_, i) => (
-          <div
-            key={i}
-            className="waveform-bar"
-            style={{ animationDelay: `${i * 0.1}s` }}
-          />
+          <div key={i} className="waveform-bar" style={{ animationDelay: `${i * 0.1}s` }} />
         ))}
       </div>
     </div>
