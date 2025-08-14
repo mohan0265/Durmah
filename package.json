@@ -8,7 +8,9 @@
   ],
   "scripts": {
     "dev": "npm run -w apps/widget dev",
+    "dev:widget": "npm run -w apps/widget dev",
     "build": "npm run -w apps/widget build",
+    "build:widget": "npm run -w apps/widget build",
     "preview": "npm run -w apps/widget preview",
     "typecheck": "npm run -w apps/widget typecheck",
     "clean": "rimraf \"**/node_modules\" \"**/.turbo\" \"**/.next\" \"**/dist\""
