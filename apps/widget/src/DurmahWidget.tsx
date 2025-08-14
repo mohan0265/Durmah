@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import type { WidgetConfig } from '@durmah/schema';
 import { useStore } from './store';
-import AudioWaveform from './components/AudioWaveform';
+import  AudioWaveform  from './components/AudioWaveform';
 import { TranscriptDisplay } from './components/TranscriptDisplay';
 import { StatusOrb } from './components/StatusOrb';
 
