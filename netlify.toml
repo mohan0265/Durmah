@@ -9,7 +9,6 @@
   port = 8888
   autoLaunch = false
 
-# Proxy all API calls to the Netlify Function
 [[redirects]]
   from = "/v1/*"
   to = "/.netlify/functions/api/:splat"
