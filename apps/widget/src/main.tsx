@@ -5,7 +5,7 @@ import { DurmahWidget } from "./DurmahWidget";
 import "./styles.css";
 
 // Build API base from Vite env (fallback to /v1)
-const API_BASE = (import.meta.env.VITE_API_BASE || "/v1").replace(/\/$/, "");
+export const API_BASE = "/v1";
 
 // Minimal config compatible with your DurmahWidget props
 const config = {
